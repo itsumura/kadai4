@@ -1,9 +1,13 @@
 #!/bin/sh
+val1=$1
+val2=$2
 
-result=$(./gcd.sh)
-if [ $result = "1" ]
-then
-	echo "NG, check it out"
+ret=$(./gcd.sh $val1 $val2)
+
+val3=$?
+
+if [ $val3 = "1" ]; then
+	echo "NG, check code out"
 else
 	echo "OK, no problem found so far"
 fi
