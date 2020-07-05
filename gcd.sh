@@ -9,6 +9,16 @@
 l=$1
 r=$2
 
+
+if [ $# != 2 ]
+then
+	echo "引数を2つ以上入れてください"
+	exit 1
+fi
+
+
+
+
 if [ $l -gt $r ]; then
 
 	i=$(( $l%$r ))
@@ -20,7 +30,7 @@ if [ $l -gt $r ]; then
 		i=`expr $l \% $r`
 
 	done
-		echo "GCD is $r"
+		echo "最大公約数は $r"
 else
 	i=$(( $r%$l ))
 
@@ -30,5 +40,5 @@ else
 		l=$i
 		i=`expr $r \%  $l`
 	done
-		echo "GCD is $l"
+		echo "最大公約数は $l"
 fi
