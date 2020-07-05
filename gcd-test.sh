@@ -2,12 +2,11 @@
 val1=$1
 val2=$2
 
-ret=$(./gcd.sh $val1 $val2)
+ret=$(./gcd.sh "$val1" "$val2")
 
-val3=$?
-
-if [ $val3 = "1" ]; then
-	echo "NG, check code out"
+if [ $? = "0" ]; then
+	echo "OK"
 else
-	echo "OK, no problem found so far"
+	echo "NG"
+	exit 1
 fi

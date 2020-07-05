@@ -1,4 +1,4 @@
 language: bash
 script:
         - echo "travis cl starts"
-        - ./gcd-test.sh
+        - ./gcd-test.sh "2" "4"

@@ -30,7 +30,7 @@ if [ $l -gt $r ]; then
 		i=`expr $l \% $r`
 
 	done
-		echo "最大公約数は $r"
+		echo "最大公約数は$r"
 else
 	i=$(( $r%$l ))
 
@@ -40,5 +40,5 @@ else
 		l=$i
 		i=`expr $r \%  $l`
 	done
-		echo "最大公約数は $l"
+		echo "最大公約数は$l"
 fi
